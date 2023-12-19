@@ -1,0 +1,1 @@
+class_name yellow_beetle_power_shot extends power_shot

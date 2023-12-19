@@ -1,0 +1,1 @@
+class_name green_shadow_normal_shot extends base_shot

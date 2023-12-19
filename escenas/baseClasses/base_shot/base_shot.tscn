@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://xgxblvnb0rgv"]
+
+[ext_resource type="Script" path="res://escenas/baseClasses/base_shot/base_shot.gd" id="1_eybi2"]
+
+[node name="base_shot" type="Area2D"]
+script = ExtResource("1_eybi2")

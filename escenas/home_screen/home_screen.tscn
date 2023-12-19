@@ -1,0 +1,140 @@
+[gd_scene load_steps=21 format=3 uid="uid://bxfcncemd2kke"]
+
+[ext_resource type="Texture2D" uid="uid://daea1ddky8q1q" path="res://assets/backgrounds/Yellow-World ,MENU-Sheet.png" id="1_8phkp"]
+[ext_resource type="Script" path="res://escenas/home_screen/home_screen.gd" id="1_y8s3m"]
+[ext_resource type="Texture2D" uid="uid://8chu7gmaibfy" path="res://assets/backgrounds/Yellow-World-MENU SPACESheet.png" id="2_rei8j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u75iw"]
+atlas = ExtResource("1_8phkp")
+region = Rect2(0, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grc1f"]
+atlas = ExtResource("1_8phkp")
+region = Rect2(576, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdgtb"]
+atlas = ExtResource("1_8phkp")
+region = Rect2(1152, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2yoq8"]
+atlas = ExtResource("1_8phkp")
+region = Rect2(1728, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5m13r"]
+atlas = ExtResource("1_8phkp")
+region = Rect2(2304, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgna8"]
+atlas = ExtResource("1_8phkp")
+region = Rect2(2880, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjrgs"]
+atlas = ExtResource("2_rei8j")
+region = Rect2(0, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nn5au"]
+atlas = ExtResource("2_rei8j")
+region = Rect2(576, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knqc8"]
+atlas = ExtResource("2_rei8j")
+region = Rect2(1152, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0a6fp"]
+atlas = ExtResource("2_rei8j")
+region = Rect2(1728, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5vps"]
+atlas = ExtResource("2_rei8j")
+region = Rect2(2304, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqj3h"]
+atlas = ExtResource("2_rei8j")
+region = Rect2(2880, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1quxa"]
+atlas = ExtResource("2_rei8j")
+region = Rect2(3456, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b77k6"]
+atlas = ExtResource("2_rei8j")
+region = Rect2(4032, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lyrg"]
+atlas = ExtResource("2_rei8j")
+region = Rect2(4608, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h78s5"]
+atlas = ExtResource("2_rei8j")
+region = Rect2(5184, 0, 576, 324)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_18xam"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u75iw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grc1f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tdgtb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yoq8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5m13r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgna8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjrgs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nn5au")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knqc8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0a6fp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5vps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqj3h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1quxa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b77k6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4lyrg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h78s5")
+}],
+"loop": false,
+"name": &"spaces",
+"speed": 9.0
+}]
+
+[node name="home_screen" type="Node2D"]
+script = ExtResource("1_y8s3m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(288, 162)
+sprite_frames = SubResource("SpriteFrames_18xam")
+animation = &"spaces"
+autoplay = "default"

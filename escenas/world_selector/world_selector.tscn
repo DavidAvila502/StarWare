@@ -1,0 +1,189 @@
+[gd_scene load_steps=16 format=3 uid="uid://btrua4xvaeidj"]
+
+[ext_resource type="Texture2D" uid="uid://dygslr3mlmjej" path="res://assets/backgrounds/Sprite-0001.png" id="1_q23ks"]
+[ext_resource type="Script" path="res://escenas/world_selector/world_selector.gd" id="1_x6h3n"]
+[ext_resource type="Texture2D" uid="uid://c4tu78tgwfhbl" path="res://assets/backgrounds/Green-World-Sheet.jpeg" id="2_54crf"]
+[ext_resource type="Texture2D" uid="uid://blfr4i2joyvrf" path="res://assets/backgrounds/Yellow-World1.png" id="3_lbue6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oau86"]
+atlas = ExtResource("2_54crf")
+region = Rect2(0, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbnwa"]
+atlas = ExtResource("3_lbue6")
+region = Rect2(0, 0, 576, 324)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ejus3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oau86")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbnwa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oau86")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbnwa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oau86")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbnwa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oau86")
+}],
+"loop": false,
+"name": &"final_select",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbnwa")
+}],
+"loop": true,
+"name": &"pre_selection",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ng3iq"]
+size = Vector2(75.0002, 44.0001)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ml4am"]
+atlas = ExtResource("2_54crf")
+region = Rect2(0, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5k4gc"]
+atlas = ExtResource("2_54crf")
+region = Rect2(576, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1w4f3"]
+atlas = ExtResource("2_54crf")
+region = Rect2(1152, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvd3b"]
+atlas = ExtResource("2_54crf")
+region = Rect2(1728, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rlohp"]
+atlas = ExtResource("2_54crf")
+region = Rect2(2304, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jnxb"]
+atlas = ExtResource("2_54crf")
+region = Rect2(2880, 0, 576, 324)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ur1ap"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ml4am")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5k4gc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1w4f3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvd3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rlohp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jnxb")
+}],
+"loop": true,
+"name": &"green_world",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ml4am")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5k4gc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1w4f3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvd3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rlohp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jnxb")
+}],
+"loop": true,
+"name": &"mundo2",
+"speed": 10.0
+}]
+
+[node name="world_selector" type="Node2D"]
+script = ExtResource("1_x6h3n")
+
+[node name="black_background" type="Sprite2D" parent="."]
+texture = ExtResource("1_q23ks")
+centered = false
+
+[node name="green_wolrd" type="Area2D" parent="."]
+position = Vector2(82, 56)
+scale = Vector2(0.999997, 0.999997)
+
+[node name="green_wolrd" type="AnimatedSprite2D" parent="green_wolrd"]
+texture_filter = 1
+position = Vector2(-40.0001, -24.0001)
+scale = Vector2(0.130208, 0.135802)
+sprite_frames = SubResource("SpriteFrames_ejus3")
+animation = &"final_select"
+autoplay = "default"
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="green_wolrd"]
+position = Vector2(-2.50001, -2.00001)
+shape = SubResource("RectangleShape2D_ng3iq")
+
+[node name="mundo2" type="Area2D" parent="."]
+position = Vector2(192, 56)
+scale = Vector2(0.999997, 0.999997)
+
+[node name="mundo2" type="AnimatedSprite2D" parent="mundo2"]
+texture_filter = 1
+position = Vector2(-40.0001, -24.0001)
+scale = Vector2(0.130208, 0.135802)
+sprite_frames = SubResource("SpriteFrames_ejus3")
+animation = &"final_select"
+autoplay = "default"
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mundo2"]
+position = Vector2(-2.50001, -2.00001)
+shape = SubResource("RectangleShape2D_ng3iq")
+
+[node name="world_background" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(390, 190)
+scale = Vector2(0.543403, 0.550926)
+sprite_frames = SubResource("SpriteFrames_ur1ap")
+animation = &"green_world"
+autoplay = "empty"

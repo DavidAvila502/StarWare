@@ -1,0 +1,190 @@
+[gd_scene load_steps=26 format=3 uid="uid://dqqo76m6x5sv1"]
+
+[ext_resource type="PackedScene" uid="uid://baudxs0x46r4e" path="res://escenas/ship_selector_skins/green_selector/green_selector.tscn" id="1_03ye3"]
+[ext_resource type="Script" path="res://escenas/ship_selector/ship_selector.gd" id="1_rlr35"]
+[ext_resource type="Texture2D" uid="uid://b4intfg72escu" path="res://assets/backgrounds/ship_selector_background.png" id="2_myk6y"]
+[ext_resource type="Texture2D" uid="uid://hb087do85h5o" path="res://assets/backgrounds/ship_selector_near_montains.png" id="3_aehml"]
+[ext_resource type="Texture2D" uid="uid://c2nt2gbw5vxap" path="res://assets/backgrounds/ship_selector_far_montains.png" id="3_n5jp1"]
+[ext_resource type="Script" path="res://escenas/ship_selector/entry_controller_p1.gd" id="3_qqijp"]
+[ext_resource type="Script" path="res://escenas/ship_selector/entry_controller_p2.gd" id="4_3cyuj"]
+[ext_resource type="Texture2D" uid="uid://cu0tp7qpu3nj" path="res://assets/character_selector/3-2-1.png" id="5_kor6t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkc2r"]
+atlas = ExtResource("2_myk6y")
+region = Rect2(0, 0, 576, 324)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k0ep1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkc2r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l33qw"]
+atlas = ExtResource("5_kor6t")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvw4d"]
+atlas = ExtResource("5_kor6t")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtevj"]
+atlas = ExtResource("5_kor6t")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1ol5"]
+atlas = ExtResource("5_kor6t")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bux4v"]
+atlas = ExtResource("5_kor6t")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nfg1"]
+atlas = ExtResource("5_kor6t")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccuxw"]
+atlas = ExtResource("5_kor6t")
+region = Rect2(600, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ec6bt"]
+atlas = ExtResource("5_kor6t")
+region = Rect2(700, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52dtb"]
+atlas = ExtResource("5_kor6t")
+region = Rect2(800, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fu23q"]
+atlas = ExtResource("5_kor6t")
+region = Rect2(900, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2ojn"]
+atlas = ExtResource("5_kor6t")
+region = Rect2(1000, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yv2tg"]
+atlas = ExtResource("5_kor6t")
+region = Rect2(1100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbqy2"]
+atlas = ExtResource("5_kor6t")
+region = Rect2(1200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e51wq"]
+atlas = ExtResource("5_kor6t")
+region = Rect2(1300, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_700l2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l33qw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mvw4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtevj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m1ol5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bux4v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5nfg1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ccuxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ec6bt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52dtb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fu23q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2ojn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yv2tg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbqy2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e51wq")
+}],
+"loop": false,
+"name": &"default",
+"speed": 4.6
+}]
+
+[node name="ship_selector" type="Node2D"]
+script = ExtResource("1_rlr35")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="plane_background" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(576, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/plane_background"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_k0ep1")
+centered = false
+
+[node name="far_mountains" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/far_mountains"]
+texture_filter = 1
+texture = ExtResource("3_n5jp1")
+centered = false
+
+[node name="near_mountains" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/near_mountains"]
+texture = ExtResource("3_aehml")
+centered = false
+
+[node name="green_selector_p1" parent="." instance=ExtResource("1_03ye3")]
+z_index = 1
+position = Vector2(160, 80)
+
+[node name="green_selector_p2" parent="." instance=ExtResource("1_03ye3")]
+z_index = 1
+position = Vector2(416, 80)
+
+[node name="entry_controller_p1" type="Node" parent="."]
+script = ExtResource("3_qqijp")
+
+[node name="entry_controller_p2" type="Node" parent="."]
+script = ExtResource("4_3cyuj")
+
+[node name="3-2-1" type="AnimatedSprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(288, 152)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_700l2")
+autoplay = "default"
+frame = 13
+frame_progress = 1.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

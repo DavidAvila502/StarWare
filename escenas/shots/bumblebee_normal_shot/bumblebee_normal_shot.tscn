@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://c61eejjj02gf3"]
+
+[ext_resource type="Script" path="res://escenas/shots/bumblebee_normal_shot/bumblebee_normal_shot.gd" id="1_8twqx"]
+[ext_resource type="Texture2D" uid="uid://8h61pgo7lion" path="res://assets/sprites/bumblebee/normal_shot.png" id="2_oevbp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3q6v"]
+atlas = ExtResource("2_oevbp")
+region = Rect2(0, 0, 19, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h25vq"]
+atlas = ExtResource("2_oevbp")
+region = Rect2(19, 0, 19, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hg5ik"]
+atlas = ExtResource("2_oevbp")
+region = Rect2(38, 0, 19, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0sij"]
+atlas = ExtResource("2_oevbp")
+region = Rect2(57, 0, 19, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jf2fe"]
+atlas = ExtResource("2_oevbp")
+region = Rect2(76, 0, 19, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxtcc"]
+atlas = ExtResource("2_oevbp")
+region = Rect2(95, 0, 19, 19)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mp56n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3q6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h25vq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hg5ik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0sij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jf2fe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxtcc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s8fg5"]
+radius = 6.0
+
+[node name="bumblebee_normal_shot" type="Area2D"]
+script = ExtResource("1_8twqx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_mp56n")
+autoplay = "default"
+frame_progress = 0.339602
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_s8fg5")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://bt7w81kq1hgpy"]
+
+[ext_resource type="Texture2D" uid="uid://bqhb2584etqra" path="res://assets/items/box_infinite/infinite-Sheet.png" id="1_5ehm2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5qhy"]
+atlas = ExtResource("1_5ehm2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2c4f"]
+atlas = ExtResource("1_5ehm2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3cmi5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5qhy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2c4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5qhy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2c4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5qhy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2c4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5qhy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2c4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5qhy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2c4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5qhy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2c4f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="box_infinite_icon" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_3cmi5")
+autoplay = "default"
+frame_progress = 0.708608

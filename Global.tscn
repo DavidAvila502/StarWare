@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://cfcykqunpesvp"]
+
+[ext_resource type="Script" path="res://Global.gd" id="1_rx4pf"]
+[ext_resource type="AudioStream" uid="uid://ffx0w2u63wo8" path="res://assets/sounds/Hit.ogg" id="2_nq7ec"]
+[ext_resource type="AudioStream" uid="uid://dwbwll5xeqjqf" path="res://assets/sounds/Retro Hit sound.wav" id="3_1wyg3"]
+[ext_resource type="AudioStream" uid="uid://1b58q0gd73ml" path="res://assets/sounds/Retro Explosion Short 01.wav" id="4_vtov0"]
+[ext_resource type="AudioStream" uid="uid://cwya57m57ql40" path="res://assets/sounds/Video-Game-Positive-Sound.mp3" id="5_17ylb"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_rx4pf")
+
+[node name="ShootSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_nq7ec")
+
+[node name="HitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1wyg3")
+
+[node name="DestroySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_vtov0")
+
+[node name="ItemSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_17ylb")

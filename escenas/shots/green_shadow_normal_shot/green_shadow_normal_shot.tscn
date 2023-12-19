@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://5c704mulrx0s"]
+
+[ext_resource type="Script" path="res://escenas/shots/green_shadow_normal_shot/green_shadow_normal_shot.gd" id="1_a7iev"]
+[ext_resource type="Texture2D" uid="uid://hvfopx57x5ii" path="res://assets/sprites/green_shadow/green_shadow_normal_shot.png" id="2_w507e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uflor"]
+atlas = ExtResource("2_w507e")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_beff7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uflor")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1rcsx"]
+radius = 6.0
+
+[node name="green_shadow_normal_shot" type="Area2D"]
+script = ExtResource("1_a7iev")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_beff7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1rcsx")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

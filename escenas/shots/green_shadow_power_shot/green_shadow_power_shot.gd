@@ -1,0 +1,1 @@
+class_name green_shadow_power_shot extends power_shot

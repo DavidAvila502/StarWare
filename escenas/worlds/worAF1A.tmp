@@ -1,0 +1,97 @@
+[gd_scene load_steps=15 format=3 uid="uid://c8dqa30r7qgt7"]
+
+[ext_resource type="Script" path="res://escenas/worlds/world.gd" id="1_1j57c"]
+[ext_resource type="PackedScene" uid="uid://dp3uiqyihe1iw" path="res://escenas/ships/yellow_beetle/yellow_beetle.tscn" id="2_kwym2"]
+[ext_resource type="Texture2D" uid="uid://c4tu78tgwfhbl" path="res://assets/backgrounds/Green-World-Sheet.jpeg" id="2_tmld7"]
+[ext_resource type="PackedScene" uid="uid://x40cnvcyvsa4" path="res://escenas/ships/bumbleBee/bumblebee.tscn" id="3_x5aon"]
+[ext_resource type="PackedScene" uid="uid://csckacqp27vol" path="res://escenas/ui/LivesCounter.tscn" id="4_h6hr2"]
+[ext_resource type="PackedScene" uid="uid://0m4o5jtfc1xh" path="res://escenas/item_spawner/item_spawner.tscn" id="9_o7q7r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oau86"]
+atlas = ExtResource("2_tmld7")
+region = Rect2(0, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5k4gc"]
+atlas = ExtResource("2_tmld7")
+region = Rect2(576, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1w4f3"]
+atlas = ExtResource("2_tmld7")
+region = Rect2(1152, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvd3b"]
+atlas = ExtResource("2_tmld7")
+region = Rect2(1728, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rlohp"]
+atlas = ExtResource("2_tmld7")
+region = Rect2(2304, 0, 576, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jnxb"]
+atlas = ExtResource("2_tmld7")
+region = Rect2(2880, 0, 576, 324)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rkwvm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oau86")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5k4gc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1w4f3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvd3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rlohp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jnxb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_35v1y"]
+size = Vector2(579.5, 20)
+
+[node name="world" type="Node2D"]
+script = ExtResource("1_1j57c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(288, 162)
+sprite_frames = SubResource("SpriteFrames_rkwvm")
+autoplay = "default"
+
+[node name="limiteSuperior" type="StaticBody2D" parent="."]
+position = Vector2(10, 38)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="limiteSuperior"]
+position = Vector2(278.25, 0)
+shape = SubResource("RectangleShape2D_35v1y")
+
+[node name="limiteInferior" type="StaticBody2D" parent="."]
+position = Vector2(10, 331)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="limiteInferior"]
+position = Vector2(278.5, 0)
+shape = SubResource("RectangleShape2D_35v1y")
+
+[node name="Player1" parent="." instance=ExtResource("2_kwym2")]
+position = Vector2(37, 146)
+
+[node name="Player2" parent="." instance=ExtResource("3_x5aon")]
+position = Vector2(529, 146)
+
+[node name="MarginContainer" parent="." instance=ExtResource("4_h6hr2")]
+
+[node name="ItemSpawner" parent="." instance=ExtResource("9_o7q7r")]
+position = Vector2(279, 49)

@@ -1,0 +1,1 @@
+class_name yellow_beetle_normal_shot extends base_shot

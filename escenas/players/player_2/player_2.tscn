@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbv4bfd3g6ins"]
+
+[ext_resource type="Script" path="res://escenas/players/player_2/player_2.gd" id="1_r2sym"]
+[ext_resource type="Script" path="res://escenas/players/player_2/entry_controller.gd" id="2_8tm56"]
+
+[node name="player2" type="Node2D"]
+script = ExtResource("1_r2sym")
+
+[node name="entry_controller" type="Node" parent="."]
+script = ExtResource("2_8tm56")

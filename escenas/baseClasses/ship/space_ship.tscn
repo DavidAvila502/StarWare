@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cs8eq4uucq0ay"]
+
+[ext_resource type="Script" path="res://escenas/baseClasses/ship/space_ship.gd" id="1_0u4fl"]
+
+[node name="Ship" type="CharacterBody2D"]
+script = ExtResource("1_0u4fl")

@@ -1,0 +1,1 @@
+class_name bumblebee_power_shot extends power_shot

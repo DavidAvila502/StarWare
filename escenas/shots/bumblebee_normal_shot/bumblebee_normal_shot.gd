@@ -1,0 +1,1 @@
+class_name bumblebee_normal_shot extends base_shot
