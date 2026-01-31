@@ -1,7 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://bxfcncemd2kke"]
+[gd_scene format=3 uid="uid://bxfcncemd2kke"]
 
 [ext_resource type="Texture2D" uid="uid://daea1ddky8q1q" path="res://assets/backgrounds/Yellow-World ,MENU-Sheet.png" id="1_8phkp"]
-[ext_resource type="Script" path="res://escenas/home_screen/home_screen.gd" id="1_y8s3m"]
+[ext_resource type="Script" uid="uid://be7so2mnntgyv" path="res://escenas/home_screen/home_screen.gd" id="1_y8s3m"]
 [ext_resource type="Texture2D" uid="uid://8chu7gmaibfy" path="res://assets/backgrounds/Yellow-World-MENU SPACESheet.png" id="2_rei8j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u75iw"]
@@ -129,10 +129,10 @@ animations = [{
 "speed": 9.0
 }]
 
-[node name="home_screen" type="Node2D"]
+[node name="home_screen" type="Node2D" unique_id=1665994774]
 script = ExtResource("1_y8s3m")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1404509020]
 texture_filter = 1
 position = Vector2(288, 162)
 sprite_frames = SubResource("SpriteFrames_18xam")

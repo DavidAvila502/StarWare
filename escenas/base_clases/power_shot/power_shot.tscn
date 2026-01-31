@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://5x2se76yv4v7"]
+
+[ext_resource type="Script" uid="uid://c8f5ha16igro5" path="res://escenas/base_clases/power_shot/power_shot.gd" id="1_knxny"]
+
+[node name="power_shoot" type="Area2D"]
+script = ExtResource("1_knxny")

@@ -338,6 +338,3 @@ func _calculate_extra_shots(player_index,extra_shots):
 			P2.add_shots(extra_shots)
 		else:
 			P2.set_shots(10)
-
-
-

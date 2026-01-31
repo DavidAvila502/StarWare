@@ -1,6 +1,6 @@
-[gd_scene load_steps=65 format=3 uid="uid://x40cnvcyvsa4"]
+[gd_scene format=3 uid="uid://x40cnvcyvsa4"]
 
-[ext_resource type="Script" path="res://escenas/ships/bumbleBee/bumblebee.gd" id="1_se6lt"]
+[ext_resource type="Script" uid="uid://bjgedwxr3i28x" path="res://escenas/ships/bumble_bee/bumble_bee.gd" id="1_se6lt"]
 [ext_resource type="Texture2D" uid="uid://c7ycv2eaaarpc" path="res://assets/sprites/bumblebee/Sprite-abejorro shoot-carga1-Sheet.png" id="2_4kfsv"]
 [ext_resource type="Texture2D" uid="uid://bwgecqcjh8skm" path="res://assets/sprites/bumblebee/Sprite-abejorrocarga2 shoot-Sheet.png" id="3_7fj7s"]
 [ext_resource type="Texture2D" uid="uid://dd08amnfr1gkx" path="res://assets/sprites/bumblebee/Sprite-abejorrocarga3 shoot-Sheet.png" id="4_r7eh4"]
@@ -450,25 +450,25 @@ animations = [{
 radius = 12.0
 height = 26.0
 
-[node name="bumbleBee" type="CharacterBody2D"]
+[node name="bumbleBee" type="CharacterBody2D" unique_id=1549679367]
 script = ExtResource("1_se6lt")
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1169016961]
 texture_filter = 1
 rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_udtlg")
 animation = &"idle"
 autoplay = "idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1931198999]
 shape = SubResource("CapsuleShape2D_fv8j1")
 
-[node name="LeftMarker" type="Marker2D" parent="."]
+[node name="LeftMarker" type="Marker2D" parent="." unique_id=358021364]
 position = Vector2(30, -16)
 
-[node name="CentralMarker" type="Marker2D" parent="."]
+[node name="CentralMarker" type="Marker2D" parent="." unique_id=2120117265]
 position = Vector2(40, 0)
 
-[node name="RightMarker" type="Marker2D" parent="."]
+[node name="RightMarker" type="Marker2D" parent="." unique_id=601735275]
 position = Vector2(30, 16)

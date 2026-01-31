@@ -2,7 +2,7 @@ extends Node2D
 @onready var selector1 = $green_selector_p1
 @onready var selector2 = $green_selector_p2
 @onready var ready_timer = $Timer
-var array_ships = ['yellow_beetle','bumblebee','green_shadow']
+var array_ships = ['yellow_beetle','bumble_bee','green_shadow']
 
 #Player 1
 var tween_p1

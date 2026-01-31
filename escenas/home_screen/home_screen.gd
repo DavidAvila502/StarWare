@@ -15,5 +15,3 @@ func _process(delta):
 			get_tree().change_scene_to_file("res://escenas/loading_screen/loading_screen.tscn")
 			
 			
-
-
